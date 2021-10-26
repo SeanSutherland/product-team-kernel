@@ -13,3 +13,7 @@ Feel free to also comment on others ideas:
    1. If apps are developed in React Native we could even display mobile apps here.
 1. Possibly have in person meetings so thoughts and ideas can be communicated more directly
 2. Having meetings in person and in person work times to help collaborate, work together, and learn
+3. Have a weekly check-in (even if it's just a message in the slack channel) to update the group on our progress and goals for the week
+4. Set limits on the amount of work we will do for individual design teams
+   1. We are a small team so I think the bulk of our efforts should go towards making templates that everyone can use, as opposed to specific features for a single group
+5. Use ticketing platform like Jira or Clickup to stay organized and informed of who is working on what
