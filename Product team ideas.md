@@ -11,4 +11,4 @@ Feel free to also comment on others ideas:
 
 1. Use portfolio.qmind.ca to highlight and host QMIND projects and their functional websites/apps.
    1. If apps are developed in React Native we could even display mobile apps here.
-1.
+1. Possibly have in person meetings so thoughts and ideas can be communicated more directly
