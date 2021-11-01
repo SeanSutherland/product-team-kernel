@@ -13,8 +13,6 @@ With python installed you should be able to install Django simply using the pack
 
 ```pip install django```
 
-#### 1.1.2 Django resources
-- 
 ### 1.2 Front-end framework: React.js
 [React.js](https://reactjs.org/) will be used to built user friendly front-end interfaces for our websites. 
 #### 1.2.1 Installing React.js
@@ -23,10 +21,9 @@ With python installed you should be able to install Django simply using the pack
 
 ```npm install bootstrap@4.6.0 reactstrap@8.9.0 --legacy-peer-deps```
 
-#### 1.2.2 React.js resources
-- 
-### 1.3 Tutorial
-You can walkthrough [this tutorial](https://www.digitalocean.com/community/tutorials/build-a-to-do-application-using-django-and-react) to learn how to build a simple Django/React website.
+### 1.3 Resources
+- [Tutorial: Django / React simple website](https://www.digitalocean.com/community/tutorials/build-a-to-do-application-using-django-and-react)
+
 ## 2.0 Mobile application
 We want to build:
 1. A blank QMIND branded mobile app
@@ -46,5 +43,5 @@ Prequesites include first installing Node.js or the npm package manager.
 
 More info on installing React Native can be found [here](https://docs.expo.dev/get-started/installation/)
 
-#### 2.1.2 Expo / React Native resources
+### 2.2 Resources
 - 
