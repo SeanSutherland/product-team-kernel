@@ -23,6 +23,10 @@ With python installed you should be able to install Django simply using the pack
 
 ### 1.3 Resources
 - [Tutorial: Django / React simple website](https://www.digitalocean.com/community/tutorials/build-a-to-do-application-using-django-and-react)
+- [Django webapp tutorial](https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&ab_channel=CoreySchafer)
+- [Django documentation](https://docs.djangoproject.com/en/3.2/)
+- [React.js getting started](https://reactjs.org/docs/getting-started.html)
+- [React.js tutorial](https://reactjs.org/tutorial/tutorial.html)
 
 ## 2.0 Mobile application
 We want to build:
@@ -44,4 +48,5 @@ Prequesites include first installing Node.js or the npm package manager.
 More info on installing React Native can be found [here](https://docs.expo.dev/get-started/installation/)
 
 ### 2.2 Resources
-- 
+- [React Native : Learn the Basics](https://reactnative.dev/docs/tutorial)
+- [React Native: Tutorial](https://www.tutorialspoint.com/react_native/index.htm)
