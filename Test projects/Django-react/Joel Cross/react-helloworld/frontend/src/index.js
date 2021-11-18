@@ -18,7 +18,7 @@ ReactDOM.render(
                 <Route path="/" element={<App />} />
                 <Route path="create" element={<CreatePerson />} />
             </Routes>
-        </BrowserRouter>,
+        </BrowserRouter>
     </React.StrictMode>,
     document.getElementById('root')
 );
