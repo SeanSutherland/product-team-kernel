@@ -11,9 +11,9 @@ class Person(models.Model):
 
 class Project(models.Model):
     CATEGORY_CHOICES = [
-        ('computer_vision', 'Computer Vision'),
-        ('dashboard', 'Dashboard'),
-        ('other', 'Other'),
+        ('Computer Vision', 'Computer Vision'),
+        ('Dashboard', 'Dashboard'),
+        ('Other', 'Other'),
     ]
 
     name = models.CharField(max_length=120)
@@ -21,7 +21,7 @@ class Project(models.Model):
     category = models.CharField(
         max_length=120,
         choices=CATEGORY_CHOICES,
-        default='other',
+        default='Other',
     )
     team_members = models.CharField(max_length=120)
 
