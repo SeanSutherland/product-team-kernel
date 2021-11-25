@@ -1,8 +1,22 @@
-.page-container {
+.page-content {
     margin: 5%;
     display: block;
     justify-content:center;
     align-items: center;
+
+    &__logo {
+        height: 25px;
+        width: auto;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 24px;
+        width: 100%;
+        border-bottom: 1px solid rgb(172, 172, 172);
+        margin-bottom: 5vh;
+    }
 
     &__projects {
         display: flex;

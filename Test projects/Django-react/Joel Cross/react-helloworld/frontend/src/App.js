@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Outlet } from "react-router-dom"
 import './App.scss'
+import logo from './Images/logo_text.png';
 import Project from './Components/Project.js'
 
 const App = () => {
@@ -13,20 +14,23 @@ const App = () => {
     }, []);
 
     return (
-        <div className="page-container">
-            <div>
-                <h1>Projects</h1>
-            </div>
-            <div className='page-container__projects'>
-                {projectData.length > 0 ?
-                    projectData.map((project) => {
-                        return <Project project={project} />
-                    })
-                    : <p>None</p>
+        <div>
+            <div className="page-content">
+            <img className="page-content__logo" src={logo} />
+                <div className="page-content__title">
+                    <p>Design Team Projects</p>
+                </div>
+                <div className='page-content__projects'>
+                    {projectData.length > 0 ?
+                        projectData.map((project) => {
+                            return <Project project={project} />
+                        })
+                        : <p>None</p>
 
-                }
+                    }
+                </div>
+                <Outlet />
             </div>
-            <Outlet />
         </div>
     );
 }
