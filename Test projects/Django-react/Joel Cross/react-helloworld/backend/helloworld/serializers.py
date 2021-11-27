@@ -1,10 +1,5 @@
 from rest_framework import serializers
-from .models import Person, Project
-
-class PersonSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Person
-        fields = ('id', 'first_name', 'last_name', 'age')
+from .models import Project
 
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:

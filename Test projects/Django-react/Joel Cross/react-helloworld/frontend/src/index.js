@@ -6,7 +6,6 @@ import {
     Route
 } from "react-router-dom"; 
 import App from './App';
-import CreatePerson from './routes/CreatePerson.js'
 import reportWebVitals from './reportWebVitals';
 
 import './index.scss'
@@ -16,7 +15,6 @@ ReactDOM.render(
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<App />} />
-                <Route path="create" element={<CreatePerson />} />
             </Routes>
         </BrowserRouter>
     </React.StrictMode>,

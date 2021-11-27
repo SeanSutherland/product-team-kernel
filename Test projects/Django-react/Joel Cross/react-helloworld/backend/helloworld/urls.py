@@ -3,7 +3,6 @@ from rest_framework import routers
 from helloworld import views
 
 router = routers.DefaultRouter()
-router.register(r'people', views.PersonView)
 router.register(r'projects', views.ProjectView)
 
 # Wire up our API using automatic URL routing.
