@@ -25,7 +25,7 @@ const App = () => {
                         projectData.map((project) => {
                             return <Project project={project} />
                         })
-                        : <p>None</p>
+                        : <p>Loading...</p>
 
                     }
                 </div>

@@ -8,6 +8,8 @@ import {
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import Dashboard1 from './DashboardProjects/Dashboard1/index.js';
+import Dashboard2 from './DashboardProjects/Dashboard2/index.js';
 import './index.scss'
 
 ReactDOM.render(
@@ -15,6 +17,8 @@ ReactDOM.render(
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<App />} />
+                <Route path="/dashboard1" element={<Dashboard1 projectName='dashboard 1'/>} />
+                <Route path="/dashboard2" element={<Dashboard2 projectName='dashboard 2'/>} />
             </Routes>
         </BrowserRouter>
     </React.StrictMode>,

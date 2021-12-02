@@ -6,10 +6,10 @@ import './Project.scss'
 
 const Project = (props) => {
     let navigate = useNavigate();
-    const { name, description, category, team_members } = props.project
+    const { name, description, category, team_members, url_suffix } = props.project
 
     function handleClick() {
-        navigate(`/${name}`)
+        navigate(`/${url_suffix}`)
     }
 
     return (
