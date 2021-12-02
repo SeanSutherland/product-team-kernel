@@ -8,4 +8,4 @@ class ProjectView(viewsets.ModelViewSet):
     serializer_class = ProjectSerializer
     queryset = Project.objects.all()
 
-    def get_project_name(request): 
+    #def get_project_name(request): 
