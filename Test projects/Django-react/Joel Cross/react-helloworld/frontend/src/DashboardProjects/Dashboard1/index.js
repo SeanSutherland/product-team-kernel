@@ -1,6 +1,6 @@
 import React from 'react'
-import Dashboard from '../Dashboard/index.js'
-import Block from '../Block/index.js'
+import Dashboard from '../Components/Dashboard/index.js'
+import Block from '../Components/Block/index.js'
 
 const Dashboard1 = (props) => {
     const blocks = [
