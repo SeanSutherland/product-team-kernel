@@ -1,0 +1,14 @@
+.dashboard {
+    margin: 4%;
+    &__title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+    }
+}
+
+.containers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
