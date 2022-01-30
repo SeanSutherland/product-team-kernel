@@ -2,14 +2,14 @@ import React from 'react'
 import { Outlet, useNavigate } from "react-router-dom"
 
 import placeholder from '../Images/logo_image.png';
-import './Project.scss'
+import './index.scss'
 
 const Project = (props) => {
     let navigate = useNavigate();
-    const { name, description, category, team_members } = props.project
+    const { name, description, category, team_members, url_suffix } = props.project
 
     function handleClick() {
-        navigate(`/${name}`)
+        navigate(`/${url_suffix}`)
     }
 
     return (

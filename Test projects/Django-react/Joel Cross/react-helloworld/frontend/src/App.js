@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Outlet } from "react-router-dom"
 import './App.scss'
 import logo from './Images/logo_text.png';
-import Project from './Components/Project.js'
+import Project from './PortfolioProject/index.js'
 
 const App = () => {
     const [projectData, setProjectData] = useState([])
@@ -25,7 +25,7 @@ const App = () => {
                         projectData.map((project) => {
                             return <Project project={project} />
                         })
-                        : <p>None</p>
+                        : <p>Loading...</p>
 
                     }
                 </div>

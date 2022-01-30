@@ -7,3 +7,5 @@ from .models import Project
 class ProjectView(viewsets.ModelViewSet):
     serializer_class = ProjectSerializer
     queryset = Project.objects.all()
+
+    #def get_project_name(request): 
