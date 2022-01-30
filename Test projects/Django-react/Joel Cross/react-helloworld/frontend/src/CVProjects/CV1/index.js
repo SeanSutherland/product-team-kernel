@@ -1,5 +1,5 @@
 import "./index.scss";
-import Classifier from "../Components/Classifier/index.js";
+import Classifier from "../Classifier/index.js";
 import { ReactComponent as Logo } from "../assets/logo.svg";
 import { ReactComponent as LogoText } from "../assets/logo_text.svg";
 import { ReactComponent as DesignText } from "../assets/Design.svg";

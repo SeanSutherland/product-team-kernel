@@ -2,7 +2,7 @@ import React from 'react'
 import { Outlet, useNavigate } from "react-router-dom"
 
 import placeholder from '../Images/logo_image.png';
-import './Project.scss'
+import './index.scss'
 
 const Project = (props) => {
     let navigate = useNavigate();
