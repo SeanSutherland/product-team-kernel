@@ -13,29 +13,17 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-'''
-from django.contrib import admin
-from django.urls import path, include
-
-from rest_framework import routers
-from helloworld import views
-from django.conf.urls import url 
-
-router = routers.DefaultRouter()
-router.register(r'People', views.PersonView, 'helloworld')
-
-urlpatterns = [
-    #path('admin/', admin.site.urls),
-    #path('api/', include(router.urls)),
-    url(r'^', include('helloworld.urls')),
-    url(r'^api/helloworld', views.PersonView),
-]
-'''
 
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('helloworld.urls')),
- ]
+    path('api-auth/', include('rest_framework.urls')),
+    path('api/', include('images.api.urls', namespace='api-images'))
+]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
