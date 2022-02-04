@@ -5,6 +5,8 @@ import * as Permissions from 'expo-permissions';
 import Camera from "expo-camera";
 import * as ImagePicker from 'expo-image-picker';
 
+import Header from "./Components/Header";
+
 export default function App() {
   
   const pickFromGallery = async () =>{
@@ -64,21 +66,25 @@ export default function App() {
       })
   } 
   
-  
-  
   return (
-    <View style={styles.container}>
-      <Button title='Camera' onPress={() => pickFromCamera()} />
-      <Button title='Click to upload' onPress={() => pickFromGallery()} />
+    <View>
+      <Header title="CV App Template"></Header>
+      <View style={styles.screen}>
+        <Button title='Camera' onPress={() => pickFromCamera()} />
+        <Button title='Click to upload' onPress={() => pickFromGallery()} />
+     </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  screen: {
+    paddingTop: 70,
+    paddingHorizontal: 70
   },
+  screenlist: {
+    marginLeft: 20,
+    marginRight: 20
+  }
 });
+
