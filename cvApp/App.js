@@ -1,11 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View, Image } from 'react-native';
 import * as Permissions from 'expo-permissions';
 import Camera from "expo-camera";
 import * as ImagePicker from 'expo-image-picker';
 
 import Header from "./Components/Header";
+import Position from 'react-native/Libraries/Components/Touchable/Position';
 
 export default function App() {
   
@@ -69,7 +70,20 @@ export default function App() {
   return (
     <View>
       <Header title="CV App Template"></Header>
-      <View style={styles.screen}>
+      <View style={image.container}>
+            <Image 
+              style={image.logo}
+              source={require("./Components/qmindLogo.jpg")}/>
+      </View>
+      <View style={description.container}>
+        <Text style={description.title}>
+          Description
+        </Text>
+        <Text style={description.text}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend purus nunc, non vulputate mauris mollis cursus. Etiam justo turpis, tincidunt in tellus non, tempus sagittis neque. Nullam non lacus at tellus eleifend dapibus. Curabitur finibus a erat sed commodo. Fusce sed pretium quam. Cras ac tempor enim. Aenean a egestas dui. Donec ullamcorper arcu sit amet nulla feugiat consectetur.
+        </Text>
+      </View>
+      <View style={buttons.screen}>
         <Button title='Camera' onPress={() => pickFromCamera()} />
         <Button title='Click to upload' onPress={() => pickFromGallery()} />
      </View>
@@ -77,14 +91,40 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
+const buttons = StyleSheet.create({
   screen: {
-    paddingTop: 70,
+    paddingTop: 50,
     paddingHorizontal: 70
   },
-  screenlist: {
-    marginLeft: 20,
-    marginRight: 20
-  }
 });
+
+const image = StyleSheet.create({
+  container:{
+    paddingTop: 20,
+    paddingHorizontal: 20,
+    alignContent: 'center',
+    alignItems: 'center'
+  },
+  logo: {
+    width: 100,
+    height: 180
+  },
+});
+
+const description = StyleSheet.create({
+  container:{
+    paddingTop: 10,
+    margin: 10,
+    alignContent: 'center',
+    alignItems: 'center'
+  },
+  title:{
+    fontSize: 20,
+    fontWeight: 'bold'
+  },
+  text:{
+    paddingTop: 10,
+    fontSize: 16,
+  }
+})
 
