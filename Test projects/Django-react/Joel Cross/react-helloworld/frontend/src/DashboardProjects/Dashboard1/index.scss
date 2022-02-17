@@ -1,0 +1,85 @@
+$projectName: "PROJECT-NAME-HERE";
+
+.#{$projectName} {
+    margin: 20px;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+
+        &-back {
+            width: 13%;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+            
+            &:hover {
+                font-weight: bold;
+            }
+
+            p {
+                margin: 10px;
+            }
+        }
+
+        &-logo {
+            height: 40px;
+        }
+
+        &-title {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            text-transform: capitalize;
+            
+            p {
+                margin: 0 0 20px 0;
+            }
+        }
+    }
+
+    &__accordion-heading {
+        font-size: 24px;
+        height: 100px;
+
+        &:hover {
+            background-color: #f0f0f0;
+        }
+    }
+
+    &__team-member {
+        width: 100%;
+        display: flex !important;
+        align-items: center;
+        justify-content: space-around;  
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            p {
+                margin: 5px;
+            }
+            a {
+                text-decoration: none;
+                font-style: italic;
+                font-weight: bold;
+                color: #234691;
+            }
+        }
+
+        &-headshot {
+            width: 200px;
+        }
+        &-name {
+            font-weight: bold;
+        }
+    }    
+}
+
+
