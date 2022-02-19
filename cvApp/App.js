@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Button, StyleSheet, Text, View, Image } from 'react-native';
+import { Button, StyleSheet, Text, View, Image, TouchableOpacity, Touchable } from 'react-native';
 import * as Permissions from 'expo-permissions';
 import Camera from "expo-camera";
 import * as ImagePicker from 'expo-image-picker';
@@ -71,9 +71,9 @@ export default function App() {
     <View>
       <Header title="CV App Template"></Header>
       <View style={image.container}>
-            <Image 
-              style={image.logo}
-              source={require("./Components/qmindLogo.jpg")}/>
+        <Image 
+          style={image.logo}
+          source={require("./Components/qmindLogo.jpg")}/>
       </View>
       <View style={description.container}>
         <Text style={description.title}>
@@ -84,17 +84,39 @@ export default function App() {
         </Text>
       </View>
       <View style={buttons.screen}>
-        <Button title='Camera' onPress={() => pickFromCamera()} />
-        <Button title='Click to upload' onPress={() => pickFromGallery()} />
-     </View>
+        <TouchableOpacity style={buttons.button} onPress={() => pickFromCamera()}>
+          <Text style={buttons.text}>Take Picture</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={buttons.separate}>
+        <TouchableOpacity style={buttons.button} onPress={() => pickFromGallery()}>
+          <Text style={buttons.text}>Upload Picture</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
 
 const buttons = StyleSheet.create({
   screen: {
-    paddingTop: 50,
+    paddingTop: 60,
     paddingHorizontal: 70
+  },
+  separate: {
+    paddingTop: 25,
+    paddingHorizontal: 70
+  },
+  button: {
+    alignItems: "center",
+    backgroundColor: "#DDDDDD",
+    padding: 10
+  },
+  text: {
+    fontSize: 16,
+    lineHeight: 21,
+    fontWeight: 'bold',
+    letterSpacing: 0.25,
+    color: 'black',
   },
 });
 
