@@ -97,15 +97,22 @@ export default function App() {
           </TouchableOpacity>
         </View>
       </View>
-      <View style={imageOpen ? styles.container: styles.invisible}>
-        <Button title = 'Back'  onPress={() => setImageOpen(false)} />
+      <View style={imageOpen ? styles.defaultScreen: styles.invisible}>
+        <Header title="Results"></Header> 
+        <View style={buttons.separate}>
+          <TouchableOpacity style={returnImage.button} onPress={() => setImageOpen(false)}>
+            <Text style={buttons.text}>Back</Text>
+          </TouchableOpacity>
+        </View>
         <Image
-          style={{width: '100%', height: '50%'}}                               //shitty old one fix dis
+          style={returnImage.container}                              
           source={{uri : picture}}
         /> 
-        <Text style = {styles.text}>
-          Label: {label}
-        </Text>
+        <View style={labelBox.container}>
+          <Text style = {labelBox.text}>
+            Classification: {label}
+          </Text>
+        </View>
       </View>
       
     </>
@@ -113,6 +120,8 @@ export default function App() {
 }
 const styles = StyleSheet.create({
   defaultScreen: {
+    alignContent: 'center',
+    alignItems: 'center'
   },
   container: {
     flex: 1,
@@ -138,6 +147,7 @@ const buttons = StyleSheet.create({
   },
   separate: {
     paddingTop: 25,
+    paddingBottom: 25,
     paddingHorizontal: 70
   },
   button: {
@@ -165,6 +175,43 @@ const image = StyleSheet.create({
     height: 180
   },
 });
+const returnImage = StyleSheet.create({
+  container:{
+    paddingTop: 20,
+    paddingHorizontal: 20,
+    alignContent: 'center',
+    alignItems: 'center',
+    width: '90%',
+    height: '60%'
+  },
+  button:{
+    alignItems: 'center',
+    paddingLeft: 20,
+    paddingRight: 20,
+    backgroundColor: "#DDDDDD",
+    padding: 10
+  }
+});
+const labelBox = StyleSheet.create({
+  container:{
+    marginRight: 40,
+    marginLeft: 40,
+    marginTop: 10,
+    paddingRight: 20,
+    paddingLeft: 20,
+    paddingTop: 20,
+    paddingBottom: 20,
+    backgroundColor: '#68a0cf',
+    borderRadius: 20,
+    borderWidth: 10,
+    borderColor: '#fff',
+  },
+  text:{
+    fontSize: 25,
+    color: '#fff',
+    textAlign: 'center',
+  }
+})
 const description = StyleSheet.create({
   container:{
     paddingTop: 10,
